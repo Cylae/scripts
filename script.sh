@@ -20,10 +20,31 @@ cat << "draw"
 /___,' /_/ /_n_//_/`_\ /_/ /_/`_\|_,' |_,'/_/  /___//_/`_\/___,' 
           SCRIPT - WEBSTART - 1.0 - ALEXANDRE CALAIS
                         EXERCICE SHELL
-		SCRIPT WILL START IN 5 SECONDS
+		SCRIPT WILL START IN 10 SECONDS
 
 
 draw
+echo -n '##                        (10%)\r'
+sleep 1
+echo -n '####                      (20%)\r'
+sleep 1
+echo -n '######                    (30%)\r'
+sleep 1
+echo -n '########                  (40%)\r'
+sleep 1
+echo -n '##########                (50%)\r'
+sleep 1
+echo -n '############              (60%)\r'
+sleep 1
+echo -n '##############            (70%)\r'
+sleep 1
+echo -n '################          (80%)\r'
+sleep 1
+echo -n '##################        (90%)\r'
+sleep 1
+echo -n '####################      (100%)\r'
+
+echo -n '\n'
 echo "Make a choice"
 echo "1 - Start the script"
 echo "2 - Exit the script"
