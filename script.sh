@@ -24,6 +24,9 @@ cat << "draw"
 
 
 draw
+
+# Progress bar
+
 echo -n '##                        (10%)\r'
 sleep 1
 echo -n '####                      (20%)\r'
@@ -44,28 +47,45 @@ echo -n '##################        (90%)\r'
 sleep 1
 echo -n '####################      (100%)\r'
 
-echo -n '\n'
+echo -n '\n \n'
+
+# Menu
+
 echo "Make a choice"
 echo "1 - Start the script"
 echo "2 - Exit the script"
 echo -n "Your choice > "
 read menu
+
+# If the choice is "1" the script will continue. If the answer is "2" the script will exit.
+
 if [ $menu = "1" ]
   then
   clear
+
+# First question
+
   echo -n "What is your firstname ? > "
   read firstname
   else
+
+# Display exit message if "2".
+
     echo "See you soon ! Visit our website : http://ecole-webstart.com/"
   exit
   fi
 
 clear
+
+#Second question
+
 echo -n "What is your lastname ? > "
 read lastname
 
 clear
 echo "Okay $firstname $lastname ! Let's do this bro'"
+
+#Third question
 
 echo "So $firstname, you think you can handle this script ? > "
 read answer_1
@@ -74,9 +94,14 @@ clear
 if [ $answer_1 = "yes" ] || [ $answer_1 = "Yes" ]
   then echo "Yeah ? You're ready ? Let's go $prenom !"
   else
+
+# Exit the script if the answer isn't "yes".
+
   echo "OK... See you !"
   exit
   fi
+
+#Fourth question
 
 echo "How old are you ? > "
 read age
@@ -85,6 +110,9 @@ clear
 if [ $age -ge "18" ]
   then echo "Woaaaaa !"
   else
+
+# Exit the script if the age is < 18 and a lovely ASCII art <3
+
   echo "You still a kid, please return this computer to Daddy."
   cat << "draw2"
                                                                                       
@@ -112,16 +140,23 @@ draw2
   exit
   fi
 
+# Fifth question
+
 echo "Quelle était le troisième code de l'exercice de la semaine passée ?"
 read exercice
 clear
 
 if [ $exercice != "42" ]
+
+# Exit the script if the answer isn't "42".
+
   then echo "Ratééééé !"
   exit
   else
   echo "Bien joué $prenom ! "
   fi
+
+# Another question...
 
 echo "Un des plus grands provider de serveur s'est fait attaqué la semaine passée, de qui s'agit-il ?"
 read OVH
@@ -132,6 +167,8 @@ if [ $OVH = "OVH" ] || [ $OVH = "ovh" ]
   else
   echo "Non ! Non mais tu suis l'actualité ou quoi ?"
   fi
+
+# WTF IS GOING ON ?!
 
 sleep 2
 clear
