@@ -172,7 +172,6 @@ if [ $OVH = "OVH" ] || [ $OVH = "ovh" ]
 
 sleep 2
 clear
-sleep 5
 echo "5"
 sleep 1
 echo "4"
