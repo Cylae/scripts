@@ -8,7 +8,7 @@
 # version : 1.1                      #
 # usage : sh script.sh               #
 # usage 2 : chmod +x script.sh       #
-#	   ./script.sh               #
+#          ./script.sh               #
 ######################################
 
 
@@ -20,7 +20,7 @@ cat << "draw"
 /___,' /_/ /_n_//_/`_\ /_/ /_/`_\|_,' |_,'/_/  /___//_/`_\/___,' 
           SCRIPT - WEBSTART - 1.0 - ALEXANDRE CALAIS
                         EXERCICE SHELL
-		SCRIPT WILL START IN 10 SECONDS
+                SCRIPT WILL START IN 10 SECONDS
 
 
 draw
@@ -49,38 +49,33 @@ echo -n '####################      (100%)\r'
 
 echo -n '\n \n'
 
-# Menu
+
+ft_menu(){
+
+#Display the menu
 
 echo "Make a choice"
 echo "1 - Start the script"
 echo "2 - Exit the script"
 echo -n "Your choice > "
 read menu
+}
 
-# If the choice is "1" the script will continue. If the answer is "2" the script will exit.
+ft_question(){
 
-if [ $menu = "1" ]
-  then
-  clear
+# Questions
 
 # First question
 
   echo -n "What is your firstname ? > "
   read firstname
-  else
+  clear
 
-# Display exit message if "2".
+# Second question
 
-    echo "See you soon ! Visit our website : http://ecole-webstart.com/"
-  exit
-  fi
-
-clear
-
-#Second question
-
-echo -n "What is your lastname ? > "
-read lastname
+  echo -n "What is your lastname ? > "
+  read lastname
+  clear
 
 clear
 echo "Okay $firstname $lastname ! Let's do this bro'"
@@ -94,11 +89,7 @@ clear
 if [ $answer_1 = "yes" ] || [ $answer_1 = "Yes" ]
   then echo "Yeah ? You're ready ? Let's go $prenom !"
   else
-
-# Exit the script if the answer isn't "yes".
-
-  echo "OK... See you !"
-  exit
+  ft_exit_2
   fi
 
 #Fourth question
@@ -110,12 +101,50 @@ clear
 if [ $age -ge "18" ]
   then echo "Woaaaaa !"
   else
+  ft_exit_3
+  fi
 
-# Exit the script if the age is < 18 and a lovely ASCII art <3
+# Fifth question
 
+echo "What was the answer of the exercice of the last week ?"
+read exercice
+clear
+
+if [ $exercice != "42" ]
+  then echo "FAAAAAAILED !"
+  exit
+  else
+  ft_exit_4
+  fi
+
+# Another question
+
+echo "One the biggest european server provider has been attack last week,"
+read OVH
+clear
+
+if [ $OVH = "OVH" ] || [ $OVH = "ovh" ]
+  then echo "Eh oui ! Le bougre s'est prit une attaque d'1Tbps ! Incroyable non $firstname ?"
+  sleep 3
+  else
+  ft_exit_5
+  fi
+}
+
+ft_exit_1(){
+    echo "See you soon ! Visit our website : http://ecole-webstart.com/"
+  exit
+}
+
+ft_exit_2(){
+  echo "OK... See you !"
+  exit
+}
+
+ft_exit_3(){
   echo "You still a kid, please return this computer to Daddy."
   cat << "draw2"
-                                                                                      
+                                                                             
                                                                                       
 NNNNNNNN        NNNNNNNN     OOOOOOOOO     WWWWWWWW                           WWWWWWWW
 N:::::::N       N::::::N   OO:::::::::OO   W::::::W                           W::::::W
@@ -138,52 +167,24 @@ NNNNNNNN         NNNNNNN     OOOOOOOOO                 WWW             WWW
                                                                                       
 draw2
   exit
-  fi
 
-# Fifth question
+}
 
-echo "Quelle était le troisième code de l'exercice de la semaine passée ?"
-read exercice
-clear
+ft_exit_4(){
+  echo "Well done $prenom ! "
+}
 
-if [ $exercice != "42" ]
-
-# Exit the script if the answer isn't "42".
-
-  then echo "Ratééééé !"
-  exit
-  else
-  echo "Bien joué $prenom ! "
-  fi
-
-# Another question...
-
-echo "Un des plus grands provider de serveur s'est fait attaqué la semaine passée, de qui s'agit-il ?"
-read OVH
-clear
-
-if [ $OVH = "OVH" ] || [ $OVH = "ovh" ]
-  then echo "Eh oui ! Le bougre s'est prit une attaque d'1Tbps ! Incroyable non ?"
-  else
+ft_exit_5(){
   echo "Non ! Non mais tu suis l'actualité ou quoi ?"
+}
+
+
+# Main
+
+ft_menu
+if [ $menu = "1" ]
+  then ft_question
+  else ft_exit_1
   fi
-
-# WTF IS GOING ON ?!
-
-sleep 2
 clear
-echo "5"
-sleep 1
-echo "4"
-sleep 1
-echo "3"
-sleep 1
-echo "2"
-sleep 1
-echo "1"
-sleep 1
-echo "0"
-sleep 1
-echo "DESTRUCTION IMMINENTE"
-sleep 1
-clear
+ft_menu
