@@ -87,7 +87,7 @@ read answer_1
 
 clear
 if [ $answer_1 = "yes" ] || [ $answer_1 = "Yes" ]
-  then echo "Yeah ? You're ready ? Let's go $prenom !"
+  then echo "Yeah ? You're ready ? Let's go $firstname !"
   else
   ft_exit_2
   fi
