@@ -119,12 +119,12 @@ if [ $exercice != "42" ]
 
 # Another question
 
-echo "One the biggest european server provider has been attack last week,"
+echo "One of the biggest european server provider has been attack last week, which company is it?"
 read OVH
 clear
 
 if [ $OVH = "OVH" ] || [ $OVH = "ovh" ]
-  then echo "Eh oui ! Le bougre s'est prit une attaque d'1Tbps ! Incroyable non $firstname ?"
+  then echo "Yeah ! A 1Tbps DDoS attack, amazing no $firstname ?"
   sleep 3
   else
   ft_exit_5
@@ -175,7 +175,7 @@ ft_exit_4(){
 }
 
 ft_exit_5(){
-  echo "Non ! Non mais tu suis l'actualité ou quoi ?"
+  echo "No ! You lived in a cave the past few weeks?"
 }
 
 
@@ -183,6 +183,7 @@ ft_exit_5(){
 
 ft_menu
 if [ $menu = "1" ]
+  clear
   then ft_question
   else ft_exit_1
   fi
