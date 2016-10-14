@@ -188,6 +188,3 @@ if [ $menu = "1" ]
   fi
 clear
 ft_menu
-echo -n "This script will auto-exit in 5 seconds."
-wait 5
-exit
