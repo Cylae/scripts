@@ -27,27 +27,38 @@ draw
 
 # Progress bar
 
-echo -n '##                        (10%)\r'
-sleep 1
-echo -n '####                      (20%)\r'
-sleep 1
-echo -n '######                    (30%)\r'
-sleep 1
-echo -n '########                  (40%)\r'
-sleep 1
-echo -n '##########                (50%)\r'
-sleep 1
-echo -n '############              (60%)\r'
-sleep 1
-echo -n '##############            (70%)\r'
-sleep 1
-echo -n '################          (80%)\r'
-sleep 1
-echo -n '##################        (90%)\r'
-sleep 1
-echo -n '####################      (100%)\r'
-
-echo -n '\n \n'
+sleep 2
+clear
+echo -n '##                        (10%)'
+sleep 0.5
+clear
+echo -n '####                      (20%)'
+sleep 0.5
+clear
+echo -n '######                    (30%)'
+sleep 0.5
+clear
+echo -n '########                  (40%)'
+sleep 0.5
+clear
+echo -n '##########                (50%)'
+sleep 0.5
+clear
+echo -n '############              (60%)'
+sleep 0.5
+clear
+echo -n '##############            (70%)'
+sleep 0.5
+clear
+echo -n '################          (80%)'
+sleep 0.5
+clear
+echo -n '##################        (90%)'
+sleep 0.5
+clear
+echo -n '####################      (100%)'
+sleep 0.5
+clear
 
 
 ft_menu(){
