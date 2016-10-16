@@ -5,7 +5,7 @@
 # description : script for Webstart  #
 # author : Alexandre Calais          #
 # date : 121016                      #
-# version : 1.1                      #
+# version : 1.0                      #
 # usage : sh script.sh               #
 # usage 2 : chmod +x script.sh       #
 #          ./script.sh               #
@@ -20,9 +20,7 @@ cat << "draw"
 /___,' /_/ /_n_//_/`_\ /_/ /_/`_\|_,' |_,'/_/  /___//_/`_\/___,' 
           SCRIPT - WEBSTART - 1.0 - ALEXANDRE CALAIS
                         EXERCICE SHELL
-                SCRIPT WILL START IN 10 SECONDS
-
-
+                SCRIPT WILL START IN 5 SECONDS
 draw
 
 # Progress bar
@@ -65,9 +63,21 @@ ft_menu(){
 
 #Display the menu
 
+cat << "draw"
+    ___ _____  _   ___  _____ ___   _    _   ___  ___  ___    ___
+  ,' _//_  _/.' \ / o |/_  _// o |,' \ ,' \ / o |/ _/ / o | ,' _/
+ _\ `.  / / / o //  ,'  / / /  ,'/ o |/ o |/ _,'/ _/ /  ,' _\ `.
+/___,' /_/ /_n_//_/`_\ /_/ /_/`_\|_,' |_,'/_/  /___//_/`_\/___,'
+          SCRIPT - WEBSTART - 1.0 - ALEXANDRE CALAIS
+                        EXERCICE SHELL
+
+
+draw
+
 echo "Make a choice"
-echo "1 - Start the script"
-echo "2 - Exit the script"
+echo "1 - Check answers"
+echo "2 - Ask me questions"
+echo "3 - Exit the script"
 echo -n "Your choice > "
 read menu
 }
@@ -189,14 +199,50 @@ ft_exit_5(){
   echo "No ! You lived in a cave the past few weeks?"
 }
 
+# Blabla
+
+ft_answer(){
+
+echo "Ask me a question."
+
+read question
+if [[ $question == *"old"* ]]
+  then echo "I'm 22 years old."
+  
+elif [[ $question == *"from"* ]]
+  then echo "I'm from Paris."
+elif [[ $question == *"color"* ]]
+  then echo "My prefered color is the blue."
+elif [[ $question == *"master"* ]]
+  then echo "My master is Chuck Norris. hehe."
+elif [[ $question == *"like me"* ]]
+  then echo "No. I don't like you."
+elif [[ $question == *"Donald Trump"* ]]
+  then echo "Don't ask me what I think about my little Trumpy..."
+elif [[ $question == *"smoke"* ]]
+  then echo "No, I don't smoke. I'm not a locomotive."
+else echo "I don't understand what you asked for."
+fi
+}
 
 # Main
 
 ft_menu
+
+#if "1" run ft_question
+
 if [ $menu = "1" ]
-  clear
   then ft_question
-  else ft_exit_1
+
+# if "2" run ft_answer
+
+elif [ $menu = "2" ]
+  then ft_answer
+  sleep 5
+
+# else exit the script
+
+else ft_exit_1
   fi
 clear
 ft_menu
