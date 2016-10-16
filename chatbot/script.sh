@@ -4,7 +4,7 @@
 # title : SCRIPT                     #
 # description : script for Webstart  #
 # author : Alexandre Calais          #
-# date : 121016                      #
+# date : 161016                      #
 # version : 1.0                      #
 # usage : sh script.sh               #
 # usage 2 : chmod +x script.sh       #
