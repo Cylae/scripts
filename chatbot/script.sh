@@ -192,7 +192,7 @@ draw2
 }
 
 ft_exit_4(){
-  echo "Well done $prenom ! "
+  echo "Well done $firstname ! "
 }
 
 ft_exit_5(){
