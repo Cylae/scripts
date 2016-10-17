@@ -1,15 +1,15 @@
 #! /bin/bash
 
-######################################
-# title : SCRIPT                     #
-# description : script for Webstart  #
-# author : Alexandre Calais          #
-# date : 161016                      #
-# version : 1.0                      #
-# usage : sh script.sh               #
-# usage 2 : chmod +x script.sh       #
-#          ./script.sh               #
-######################################
+########################################################
+# title : SCRIPT                                       #
+# description : script for Webstart                    #
+# author : Alexandre Calais  - Mohamed Gassama         #
+# date : 161016                                        #
+# version : 1.0                                        #
+# usage : sh script.sh                                 #
+# usage 2 : chmod +x script.sh                         #
+#          ./script.sh                                 #
+########################################################
 
 
 clear
@@ -18,7 +18,7 @@ cat << "draw"
   ,' _//_  _/.' \ / o |/_  _// o |,' \ ,' \ / o |/ _/ / o | ,' _/
  _\ `.  / / / o //  ,'  / / /  ,'/ o |/ o |/ _,'/ _/ /  ,' _\ `. 
 /___,' /_/ /_n_//_/`_\ /_/ /_/`_\|_,' |_,'/_/  /___//_/`_\/___,' 
-          SCRIPT - WEBSTART - 1.0 - ALEXANDRE CALAIS
+ SCRIPT - WEBSTART - 1.0 - ALEXANDRE CALAIS - MOHAMED GASSAMA
                         EXERCICE SHELL
                 SCRIPT WILL START IN 5 SECONDS
 draw
